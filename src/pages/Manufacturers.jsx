@@ -13,6 +13,14 @@ const manufacturers = [
   { id: 8, name: 'Bayer AG', region: 'Germany - Leverkusen', category: 'Life Sciences', securityScore: 96, status: 'certified' }
 ];
 
+const Manufacturers = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredData = manufacturers.filter(m => 
+    m.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    m.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const handleApply = () => {
     alert("Thank you for your interest! Our partnership team will contact you within 48 hours with the certification requirements.");
   };

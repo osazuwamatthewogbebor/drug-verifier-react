@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, Phone, MessageSquare, Microscope, Building, Globe, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Message Sent Securely!\n\nThank you for reaching out. A representative from the selected department will respond to your inquiry via email within 24 hours.");
