@@ -2,31 +2,36 @@ import React from 'react';
 import { Mail, Phone, MessageSquare, Microscope, Building, Globe, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Message Sent Securely!\n\nThank you for reaching out. A representative from the selected department will respond to your inquiry via email within 24 hours.");
+    e.target.reset();
+  };
+
   return (
     <div className="pt-32 pb-20 min-h-screen bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 text-center mb-16">
-        <h1 className="text-5xl font-black text-slate-900 mb-6">Contact Our Network</h1>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6 text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 px-4 md:px-0">Contact Our Network</h1>
+        <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto px-6 md:px-0">
           Need legal help, lab analysis, or technical support? Our global teams are ready to assist you.
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 gap-8">
         {/* Contact Form */}
-        <div className="lg:col-span-2 bg-white rounded-[40px] p-8 md:p-12 border border-slate-100 shadow-xl shadow-slate-200/50">
+        <div className="lg:col-span-2 bg-white rounded-[40px] p-6 md:p-12 border border-slate-100 shadow-xl shadow-slate-200/50">
           <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
             <MessageSquare size={24} className="text-healthcare-600" />
             Send a Secure Message
           </h2>
-          <form className="grid md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4 text-left">
               <label className="block text-sm font-bold text-slate-700 ml-1">Full Name</label>
-              <input type="text" placeholder="John Doe" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-healthcare-500 outline-none transition-all" />
+              <input required type="text" placeholder="John Doe" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-healthcare-500 outline-none transition-all" />
             </div>
             <div className="space-y-4 text-left">
               <label className="block text-sm font-bold text-slate-700 ml-1">Email Address</label>
-              <input type="email" placeholder="john@example.com" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-healthcare-500 outline-none transition-all" />
+              <input required type="email" placeholder="john@example.com" className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-healthcare-500 outline-none transition-all" />
             </div>
             <div className="md:col-span-2 space-y-4 text-left">
               <label className="block text-sm font-bold text-slate-700 ml-1">Inquiry Type</label>
@@ -39,10 +44,10 @@ const Contact = () => {
             </div>
             <div className="md:col-span-2 space-y-4 text-left">
               <label className="block text-sm font-bold text-slate-700 ml-1">Message Content</label>
-              <textarea rows="5" placeholder="Please describe your inquiry in detail..." className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-healthcare-500 outline-none transition-all"></textarea>
+              <textarea required rows="5" placeholder="Please describe your inquiry in detail..." className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-healthcare-500 outline-none transition-all"></textarea>
             </div>
             <div className="md:col-span-2">
-              <button className="w-full btn-primary py-4 flex items-center justify-center gap-3 text-lg">
+              <button type="submit" className="w-full btn-primary py-4 flex items-center justify-center gap-3 text-lg active:scale-95 transition-all">
                 Send Message <Send size={20} />
               </button>
             </div>

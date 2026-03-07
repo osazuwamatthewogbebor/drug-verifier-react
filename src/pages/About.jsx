@@ -59,27 +59,30 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <button className="mt-12 px-8 py-4 bg-healthcare-600 hover:bg-healthcare-700 text-white font-bold rounded-2xl transition-all flex items-center gap-3">
+            <button 
+              onClick={() => alert("Our technology whitepaper is currently being updated for v4.2. Please check back in a few days or contact our tech team for the draft.")}
+              className="mt-12 px-8 py-4 bg-healthcare-600 hover:bg-healthcare-700 text-white font-bold rounded-2xl transition-all flex items-center gap-3 active:scale-95"
+            >
               Learn about our Tech <Server size={20} />
             </button>
           </div>
 
-          <div className="flex-1 grid grid-cols-2 gap-6 relative z-10">
-            <div className="bg-white/5 backdrop-blur-md p-10 rounded-[40px] border border-white/10 text-center">
-              <span className="block text-4xl font-black mb-2">99.9%</span>
-              <span className="text-white/40 font-bold uppercase tracking-widest text-xs">Registry Uptime</span>
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10 w-full">
+            <div className="bg-white/5 backdrop-blur-md p-8 md:p-10 rounded-[40px] border border-white/10 text-center">
+              <span className="block text-3xl md:text-4xl font-black mb-2">99.9%</span>
+              <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">Registry Uptime</span>
             </div>
-            <div className="bg-healthcare-600 p-10 rounded-[40px] text-center shadow-2xl shadow-healthcare-900">
-              <span className="block text-4xl font-black mb-2">0ms</span>
-              <span className="text-healthcare-100 font-bold uppercase tracking-widest text-xs">Latency Goal</span>
+            <div className="bg-healthcare-600 p-8 md:p-10 rounded-[40px] text-center shadow-2xl shadow-healthcare-900">
+              <span className="block text-3xl md:text-4xl font-black mb-2">0ms</span>
+              <span className="text-healthcare-100 font-bold uppercase tracking-widest text-[10px]">Latency Goal</span>
             </div>
-            <div className="bg-white p-10 rounded-[40px] text-center text-slate-900">
-              <span className="block text-4xl font-black mb-2">24/7</span>
-              <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">Live Monitoring</span>
+            <div className="bg-white p-8 md:p-10 rounded-[40px] text-center text-slate-900">
+              <span className="block text-3xl md:text-4xl font-black mb-2">24/7</span>
+              <span className="text-slate-400 font-bold uppercase tracking-widest text-[10px]">Live Monitoring</span>
             </div>
-            <div className="bg-white/5 backdrop-blur-md p-10 rounded-[40px] border border-white/10 text-center">
-              <span className="block text-4xl font-black mb-2">12M+</span>
-              <span className="text-white/40 font-bold uppercase tracking-widest text-xs">Checks/Year</span>
+            <div className="bg-white/5 backdrop-blur-md p-8 md:p-10 rounded-[40px] border border-white/10 text-center">
+              <span className="block text-3xl md:text-4xl font-black mb-2">12M+</span>
+              <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">Checks/Year</span>
             </div>
           </div>
         </div>

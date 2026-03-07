@@ -13,24 +13,20 @@ const manufacturers = [
   { id: 8, name: 'Bayer AG', region: 'Germany - Leverkusen', category: 'Life Sciences', securityScore: 96, status: 'certified' }
 ];
 
-const Manufacturers = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const filteredData = manufacturers.filter(m => 
-    m.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-    m.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const handleApply = () => {
+    alert("Thank you for your interest! Our partnership team will contact you within 48 hours with the certification requirements.");
+  };
 
   return (
     <div className="pt-32 pb-20 min-h-screen bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <header className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-16">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        <header className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 mb-16 px-4 md:px-0">
           <div className="max-w-2xl text-left">
              <div className="inline-flex items-center gap-2 px-4 py-2 bg-healthcare-50 rounded-full text-healthcare-700 text-xs font-black tracking-widest uppercase mb-6">
                 <Award size={14} /> Official Network
              </div>
-             <h1 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">Pharmaceutical Partners</h1>
-             <p className="text-lg text-slate-500 leading-relaxed">
+             <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-tight">Pharmaceutical Partners</h1>
+             <p className="text-base md:text-lg text-slate-500 leading-relaxed">
                SafeVerify collaborates with top-tier global manufacturers that integrate our molecular verification technology directly into their production lines.
              </p>
           </div>
@@ -42,7 +38,7 @@ const Manufacturers = () => {
               placeholder="Search manufacturers..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-16 pr-6 py-5 bg-white border border-slate-200 rounded-[24px] shadow-sm outline-none focus:ring-4 focus:ring-healthcare-500/10 focus:border-healthcare-500 transition-all font-medium text-slate-900"
+              className="w-full pl-16 pr-6 py-4 md:py-5 bg-white border border-slate-200 rounded-[24px] shadow-sm outline-none focus:ring-4 focus:ring-healthcare-500/10 focus:border-healthcare-500 transition-all font-medium text-slate-900"
             />
           </div>
         </header>
@@ -117,7 +113,10 @@ const Manufacturers = () => {
              <h3 className="text-2xl font-bold mb-2">Join the Registry</h3>
              <p className="text-healthcare-100/70 text-sm max-w-md">Apply to become a certified SafeVerify manufacturer and protect your patients.</p>
            </div>
-           <button className="relative z-10 bg-white text-healthcare-900 px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-healthcare-50 transition-all shadow-xl shadow-black/20">
+           <button 
+             onClick={handleApply}
+             className="relative z-10 bg-white text-healthcare-900 px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-healthcare-50 transition-all shadow-xl shadow-black/20 active:scale-95"
+           >
              Apply Now
            </button>
            <div className="absolute right-0 top-0 w-64 h-full bg-healthcare-500/20 skew-x-12 translate-x-32" />

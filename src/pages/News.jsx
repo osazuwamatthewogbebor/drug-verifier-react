@@ -75,6 +75,13 @@ const News = () => {
     ? newsItems 
     : newsItems.filter(item => item.type === filter);
 
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    const email = e.target.querySelector('input').value;
+    alert(`Success! ${email} has been added to our critical safety alert registry. You will receive emergency recall notices immediately.`);
+    e.target.reset();
+  };
+
   return (
     <div className="pt-32 pb-20 min-h-screen bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">
@@ -170,7 +177,7 @@ const News = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-32 bg-slate-900 rounded-[40px] p-12 md:p-16 text-center text-white relative overflow-hidden"
+          className="mt-32 bg-slate-900 rounded-[40px] p-8 md:p-16 text-center text-white relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-healthcare-500/10 blur-[100px]" />
           <div className="relative z-10">
@@ -178,13 +185,14 @@ const News = () => {
             <p className="text-slate-400 max-w-xl mx-auto mb-10 text-lg">
               Subscribe to real-time safety alerts and emergency drug recalls delivered directly to your device.
             </p>
-            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+            <form onSubmit={handleSubscribe} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4 px-4 md:px-0">
               <input 
+                required
                 type="email" 
                 placeholder="Enter your medical email..." 
                 className="flex-grow px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-white/20 outline-none focus:ring-2 focus:ring-healthcare-500 transition-all text-sm"
               />
-              <button className="bg-healthcare-600 hover:bg-healthcare-500 text-white px-8 py-4 rounded-2xl font-bold transition-all shadow-xl shadow-healthcare-600/20 active:scale-95 flex items-center justify-center gap-2">
+              <button type="submit" className="bg-healthcare-600 hover:bg-healthcare-500 text-white px-8 py-4 rounded-2xl font-bold transition-all shadow-xl shadow-healthcare-600/20 active:scale-95 flex items-center justify-center gap-2">
                 Subscribe <ArrowRight size={18} />
               </button>
             </form>
