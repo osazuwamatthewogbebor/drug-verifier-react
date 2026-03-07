@@ -156,7 +156,10 @@ const News = () => {
                   <div className="text-[11px] font-black text-slate-300 uppercase tracking-widest">
                     Source: {item.source}
                   </div>
-                  <button className="p-2 bg-slate-50 text-slate-400 rounded-xl group-hover:bg-healthcare-600 group-hover:text-white transition-all">
+                  <button 
+                    onClick={() => alert(`Opening full report: "${item.title}"\n\nFull analysis and documentation for this ${item.type} will load in a new secure window.`)}
+                    className="p-2 bg-slate-50 text-slate-400 rounded-xl group-hover:bg-healthcare-600 group-hover:text-white transition-all shadow-sm active:scale-90"
+                  >
                     <ArrowRight size={18} />
                   </button>
                 </div>

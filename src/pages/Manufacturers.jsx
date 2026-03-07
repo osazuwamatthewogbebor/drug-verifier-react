@@ -116,18 +116,19 @@ const Manufacturers = () => {
           </div>
         )}
 
-        <div className="mt-20 p-10 bg-healthcare-900 rounded-[40px] flex flex-col md:flex-row items-center justify-between gap-8 text-white relative overflow-hidden shadow-2xl shadow-healthcare-900/20">
+        <div className="mt-20 p-12 bg-slate-900 rounded-[40px] flex flex-col md:flex-row items-center justify-between gap-8 text-white relative overflow-hidden shadow-2xl shadow-slate-900/20">
            <div className="relative z-10 text-center md:text-left">
-             <h3 className="text-2xl font-bold mb-2">Join the Registry</h3>
-             <p className="text-healthcare-100/70 text-sm max-w-md">Apply to become a certified SafeVerify manufacturer and protect your patients.</p>
+             <h3 className="text-3xl font-bold mb-2">Join the Registry</h3>
+             <p className="text-slate-400 text-sm max-w-md">Apply to become a certified SafeVerify manufacturer and protect your patients.</p>
            </div>
            <button 
              onClick={handleApply}
-             className="relative z-10 bg-white text-healthcare-900 px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-healthcare-50 transition-all shadow-xl shadow-black/20 active:scale-95"
+             className="relative z-10 bg-healthcare-600 text-white px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-healthcare-500 transition-all shadow-xl shadow-healthcare-600/40 active:scale-95 border-none outline-none"
            >
              Apply Now
            </button>
-           <div className="absolute right-0 top-0 w-64 h-full bg-healthcare-500/20 skew-x-12 translate-x-32" />
+           <div className="absolute right-0 top-0 w-96 h-full bg-healthcare-600/10 skew-x-12 translate-x-32" />
+           <div className="absolute left-0 bottom-0 w-64 h-64 bg-healthcare-600/5 rounded-full -translate-x-32 translate-y-32 blur-3xl" />
         </div>
       </div>
     </div>
