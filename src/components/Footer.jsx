@@ -21,8 +21,16 @@ const Footer = () => {
           <Link to="/contact" className="py-2 hover:text-healthcare-600 transition-colors">Contact Lab</Link>
           <Link to="/about" className="py-2 hover:text-healthcare-600 transition-colors">Organization</Link>
         </div>
-        <div className="mt-12 pt-8 border-t border-slate-50 text-[11px] font-bold text-slate-300 uppercase tracking-[0.2em]">
-          &copy; 2026 SafeVerify Global Registry &bull; Protected by Molecular Blockchain
+        <div className="mt-12 pt-8 border-t border-slate-50 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-bold text-slate-300 uppercase tracking-[0.2em]">
+          <span>&copy; 2026 SafeVerify Global Registry &bull; Protected by Molecular Blockchain</span>
+          <a 
+            href="https://wa.me/2348164776022" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-healthcare-600 hover:text-healthcare-500 transition-colors tracking-widest"
+          >
+            Designed by MattTech
+          </a>
         </div>
       </div>
     </footer>
