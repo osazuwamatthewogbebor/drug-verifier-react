@@ -13,6 +13,7 @@ import Contact from './pages/Contact.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import HelpModal from './components/HelpModal.jsx';
+import BackToTop from './components/BackToTop.jsx';
 
 const VALID_CODES = [
   "DRG-7A9K-21XQ",
@@ -81,6 +82,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
+        <BackToTop />
       </div>
     </Router>
   );

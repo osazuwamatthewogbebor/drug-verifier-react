@@ -6,12 +6,12 @@ const Footer = () => {
   return (
     <footer className="relative z-10 bg-white border-t border-slate-100 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <div className="w-10 h-10 bg-healthcare-600 rounded-xl flex items-center justify-center text-white">
+        <Link to="/" className="inline-flex items-center justify-center gap-2 mb-6 group transition-all hover:scale-105 active:scale-95">
+          <div className="w-10 h-10 bg-healthcare-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-healthcare-600/20 group-hover:bg-healthcare-500 transition-colors">
             <ShieldCheck size={24} />
           </div>
           <span className="text-xl font-black text-slate-900 tracking-tight italic">SafeVerify<span className="text-healthcare-600">.</span></span>
-        </div>
+        </Link>
         <p className="max-w-md mx-auto text-slate-500 text-sm mb-10 leading-relaxed">
           Our mission is to end the circulation of counterfeit medication globally. Data provided is for verification purposes only.
         </p>
